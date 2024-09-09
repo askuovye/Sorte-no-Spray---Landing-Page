@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1b2b31;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    display: flex;
+    background-color: #221127;
+    color: white;
+    padding: 10px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+header a {
+    display: flex;  
+    align-items: center;  
+    text-decoration: none;
+    color: white;
+    margin-right: 60%;
+}
+.icon {
+    margin-right: 5px;
+    width: 100px;
+    height: 100px;
+}
+.titletext {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 60%;
+}
+.moneytext {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    margin-right: 50px;
+    flex-direction: row;
+    white-space: nowrap;
+}
+.profileicon {
+    width: 45px;
+    height: 45px;
+}
+.banner {
+    margin-top: 100px;
+    height: 70vh;
+    background-image: url('banner.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+.banner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.banner-content {
+    display: flex;
+    z-index: 2;
+}
+.bannerimage {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+.banner h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.banner p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.banner a {
+    text-decoration: none;
+    color: #fff;
+}
+.cadastrar {
+    background-color: #22b9ff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 8px 16px rgb(0, 0, 0, 0.1);
+    margin-right: 15px;
+    cursor: pointer;
+}
+.entrar {
+    background-color: #22b9ff;
+    padding: 15px 42px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.discount {
+    height: 25vh;
+    background-image: url('disc-background.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    position: relative;
+}
+.discount-content {
+    display: flex;
+}
+.discount-percent {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+.neymar-discount {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+.discount-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.discount h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+.discount p {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 15px;  
+}
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    flex: 1;
+    padding: 80px 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+.box-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content : center;
+    gap: 20px;
+    max-width: 1200px;
+}
+.bottom-box {
+    background-color: #5698b3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 20px; 
+    max-width: 300px; 
+    margin-left: auto; 
+    margin-right: auto;
+    align-items: center;
+    flex-direction: column;
+}
+.box h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+}
+.box p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}.box a{
+    text-decoration: none;
+    color: white;
+}
+.box-button {
+    background-color: #22b9ff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.box-button:hover {
+    background-color: #1a8ccc;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.box-button:active {
+    background-color: #187ba8;
+    transform: translateY(0);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    .box-grid {
+        flex-direction: column;
+        align-items: center;
+    }    
+
+    .box {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 90%;
+    }
+}
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    padding: 10px;
+    margin-top: 250px;
+    color: white;
+}
+.login-content {
+    background-color: #221127;
+    padding: 70px 120px ;
+    border-radius: 18px;
+    text-decoration: none;
+}
+.login-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+}
+.login-button {
+    background-color: #22b9ff;
+    padding: 5px 28px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 8px 16px rgb(0, 0, 0, 0.1);
+    color: white;
+    margin-bottom: 10px;
+}
+.sign-in {
+    background-color: #22b9ff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 8px 16px rgb(0, 0, 0, 0.1);
+}
+.login a{
+    text-decoration: none;
+    color: white;
+}
+.signin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    padding: 5px 15px;
+    margin-top: 250px;
+    color: white;
+}
+.signin-button {
+    background-color: #22b9ff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 8px 16px rgb(0, 0, 0, 0.1);
+    color: white;
+    margin-bottom: 10px;
+}
+.signin-content {
+    background-color: #221127;
+    padding: 70px 120px ;
+    border-radius: 18px;
+    text-decoration: none;
+}
+.signin-title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+}
+.signin a {
+    text-decoration: none;
+    color: white;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 15px;
+}
